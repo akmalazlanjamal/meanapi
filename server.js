@@ -218,7 +218,9 @@ apiRouter.route('/users/:user_id')
         });
     });
 
-
+apiRouter.get('/me', function (req, res) {
+    res.send(req.decoded);
+});
 
 // test route to make sure everything is working
 // accessed at GET http://localhost:1234/api
